@@ -17,7 +17,7 @@ services:
       DRONE_GITHUB_CLIENT_SECRET: "f28d3e3c0e056bb35e8fd9beec532593163c5b5a"
       # drone server 需要與 runner (client) 連接的金鑰 !!! 需要與 runner 設定一樣才找得到
       DRONE_RPC_SECRET: "super-duper-secret"
-      DRONE_SERVER_HOST: "5e42-1-170-14-169.ngrok.io"
+      DRONE_SERVER_HOST: "5e42-1-170-14-169.ngrok.io" # 只需要保留網域名稱就好，不需要 http/https
       DRONE_SERVER_PROTO: "http"
 
   app:
@@ -30,7 +30,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock 
     environment:
       DRONE_RPC_PROTO: "http"
-      DRONE_RPC_HOST: "5e42-1-170-14-169.ngrok.io"
+      DRONE_RPC_HOST: "5e42-1-170-14-169.ngrok.io" # 只需要保留網域名稱就好，不需要 http/https
       # 與 drone server 連接的金鑰 
       DRONE_RPC_SECRET: "super-duper-secret"
       DRONE_RUNNER_CAPACITY: "1"
